@@ -1,5 +1,5 @@
 {
-  "name": "js-decode-if-json",
+  "name": "@annoai/js-decode-if-json",
   "version": "1.0.0",
   "description": "A helper method that decodes a value if json else defaults to an input value.",
   "main": "index.js",
