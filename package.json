@@ -1,0 +1,22 @@
+{
+  "name": "js-decode-if-json",
+  "version": "1.0.0",
+  "description": "A helper method that decodes a value if json else defaults to an input value.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anno-ai/js-decode-if-json.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anno-ai/js-decode-if-json/issues"
+  },
+  "homepage": "https://github.com/anno-ai/js-decode-if-json#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
