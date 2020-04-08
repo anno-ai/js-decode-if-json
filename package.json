@@ -1,9 +1,12 @@
 {
   "name": "@annoai/js-decode-if-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A helper method that decodes a value if json else defaults to an input value.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
+    "build": "tsc",
+    "build-npm": "npm ci && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +20,14 @@
   },
   "homepage": "https://github.com/anno-ai/js-decode-if-json#readme",
   "dependencies": {
+    "@types/node": "^13.11.0",
     "lodash": "^4.17.15"
-  }
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "typings": "dist/index.d.ts"
 }
