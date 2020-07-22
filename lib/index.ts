@@ -1,7 +1,7 @@
 const defaultTo = require('lodash/defaultTo')
 
 /**
- * Decodes a string if it is json. Returns default value if nil
+ * Decodes a string if it is json. Returns default value if nil/null
  */
 export function decodeIfJson (value: any, defaultValue:any = null): any {
   try {
