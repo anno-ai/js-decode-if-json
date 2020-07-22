@@ -1,31 +1,73 @@
 {
   "name": "@annoai/js-decode-if-json",
-  "version": "1.0.2",
   "description": "A helper method that decodes a value if json else defaults to an input value.",
-  "main": "dist/lib/index.js",
-  "scripts": {
-    "build": "tsc",
-    "build-npm": "npm ci && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/anno-ai/js-decode-if-json#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anno-ai/js-decode-if-json.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/anno-ai/js-decode-if-json/issues"
   },
-  "homepage": "https://github.com/anno-ai/js-decode-if-json#readme",
+  "main": "dist/lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "standardx --verbose | snazzy",
+    "lint:fix": "standardx --fix --verbose | snazzy",
+    "test:unit": "mocha --config .mocharc.json"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@types/node": "^13.11.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/jest": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.8.3"
+    "chai-fs": "^2.0.0",
+    "chai-string": "^1.5.0",
+    "lint-staged": "^8.2.1",
+    "mocha": "^8.0.1",
+    "standardx": "^5.0.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error",
+      "lodash/import-scope": "off"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "standardx": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ],
+    "global": [
+      "after",
+      "afterEach",
+      "assert",
+      "before",
+      "beforeEach",
+      "describe",
+      "expect",
+      "it"
+    ]
   }
 }
